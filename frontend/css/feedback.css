@@ -1,0 +1,29 @@
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse; /* inverte visualmente para que o ~ funcione */
+  font-size: 2.5rem;
+  user-select: none;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 0.1rem;
+}
+
+/* Estrelas selecionadas (input checado e todos os labels depois dele) */
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating input[type="radio"]:checked + label {
+  color: gold;
+}
+
+/* Hover nas estrelas (estrela que recebe hover e todas anteriores) */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}

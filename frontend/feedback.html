@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback do Evento</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/feedback.css" />
+</head>
+
+<body>
+  <div class="card mx-auto mt-5 p-4" style="max-width: 480px;">
+    <h3 class="text-center mb-4">⭐ Deixe seu Feedback</h3>
+    <form id="form-feedback" novalidate>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Seu nome (ou deixe em branco para Anônimo)</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome ou deixe vazio" />
+      </div>
+
+      <div class="mb-3">
+        <label for="comentario" class="form-label">Comentário (opcional)</label>
+        <textarea class="form-control" id="comentario" name="comentario" rows="3"
+          placeholder="Deixe seu comentário aqui (se desejar)"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Avaliação por Estrelas <span class="text-danger">*</span></label><br />
+        <div class="star-rating">
+          <input type="radio" id="estrela5" name="estrelas" value="5" required />
+          <label for="estrela5" title="Excelente">★</label>
+
+          <input type="radio" id="estrela4" name="estrelas" value="4" />
+          <label for="estrela4" title="Muito bom">★</label>
+
+          <input type="radio" id="estrela3" name="estrelas" value="3" />
+          <label for="estrela3" title="Bom">★</label>
+
+          <input type="radio" id="estrela2" name="estrelas" value="2" />
+          <label for="estrela2" title="Regular">★</label>
+
+          <input type="radio" id="estrela1" name="estrelas" value="1" />
+          <label for="estrela1" title="Ruim">★</label>
+        </div>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">
+          Enviar Feedback
+        </button>
+      </div>
+    </form>
+    <div id="mensagem" class="mt-3 text-center"></div>
+  </div>
+
+  <link rel="stylesheet" href="js/feedback.js">
+</body>
+
+</html>

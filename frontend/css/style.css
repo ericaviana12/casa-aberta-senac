@@ -1,0 +1,38 @@
+/* ========== Página form.html ========== */
+
+.logo-casa-aberta {
+    max-width: 180px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+}
+
+.btn-voltar {
+    margin-top: 20px;
+}
+
+/* ========== Página index.html ========== */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.btn-presenca {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
