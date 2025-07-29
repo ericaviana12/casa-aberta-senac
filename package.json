@@ -12,6 +12,20 @@
   },
   "license": "MIT",
   "author": "Erica Viana",
+  "contributors": [
+    {
+      "name": "Bruno Dorea"
+    },
+    {
+      "name": "Elen Grecco"
+    },
+    {
+      "name": "Gabriel Coutinho"
+    },
+    {
+      "name": "Gustavo Nunes"
+    }
+  ],
   "type": "commonjs",
   "main": "index.js",
   "scripts": {

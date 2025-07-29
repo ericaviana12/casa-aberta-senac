@@ -2,16 +2,8 @@
   "name": "casa-aberta-senac",
   "version": "1.0.0",
   "description": "Projeto Casa Aberta Senac. Para registro de presenças, feedback e dashboard com dados do sistema em tempo real.",
-  "homepage": "https://github.com/ericaviana12/casa-aberta-senac#readme",
-  "bugs": {
-    "url": "https://github.com/ericaviana12/casa-aberta-senac/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ericaviana12/casa-aberta-senac.git"
-  },
-  "license": "MIT",
   "author": "Erica Viana",
+  "license": "MIT",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
