@@ -1,0 +1,79 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo com degradê */
+body {
+  background: linear-gradient(135deg, #f9efe0 0%, #e9d6b7 100%);
+  color: #4a4a4a;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b37c28;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #b37c28;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #6b4c3b;
+  margin-bottom: 20px;
+}
+
+img.shadow {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: 2px solid #b37c28;
+  padding: 5px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #d8c7b1;
+  padding-top: 10px;
+  width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+  .logoFb {
+    width: 110px;
+    height: 110px;
+  }
+
+  img.shadow {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

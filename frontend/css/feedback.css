@@ -1,8 +1,93 @@
+/* Fundo com degradê suave */
+body {
+  background: linear-gradient(135deg, #f9efe0 0%, #e9d6b7 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a4a4a;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card-feedback {
+  background-color: #fff8f2;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(179, 124, 40, 0.25);
+  max-width: 480px;
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #6b4c3b;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Inputs e textarea */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #d8c7b1;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #4a4a4a;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #b37c28;
+  outline: none;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Botão enviar */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #b37c28;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #6b4c3b;
+}
+
+/* Mensagem feedback */
+#mensagem {
+  margin-top: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estrelas */
 .star-rating {
   display: inline-flex;
-  flex-direction: row-reverse; /* inverte visualmente para que o ~ funcione */
+  flex-direction: row-reverse;
   font-size: 2.5rem;
   user-select: none;
+  margin-top: 0.4rem;
 }
 
 .star-rating input[type="radio"] {
@@ -10,20 +95,18 @@
 }
 
 .star-rating label {
-  color: #ccc;
+  color: #c5b29a;
   cursor: pointer;
   transition: color 0.2s;
   padding: 0 0.1rem;
 }
 
-/* Estrelas selecionadas (input checado e todos os labels depois dele) */
 .star-rating input[type="radio"]:checked ~ label,
 .star-rating input[type="radio"]:checked + label {
-  color: gold;
+  color: #b37c28;
 }
 
-/* Hover nas estrelas (estrela que recebe hover e todas anteriores) */
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-  color: gold;
+  color: #b37c28;
 }

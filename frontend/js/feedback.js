@@ -4,7 +4,6 @@ const mensagem = document.getElementById('mensagem')
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    // Validação das estrelas (obrigatório)
     const estrelas = form.estrelas.value
     if (!estrelas) {
         mensagem.textContent = 'Por favor, selecione uma avaliação por estrelas.'
@@ -12,33 +11,31 @@ form.addEventListener('submit', async (e) => {
         return
     }
 
-    // Se nome vazio, envia null para o backend (o backend substitui por 'Anônimo' se quiser)
-    const nomeRaw = form.nome.value.trim()
-    const nome = nomeRaw === '' ? null : nomeRaw
+    let nome = form.nome.value.trim()
+    if (!nome) nome = null
 
-    // Comentário opcional, enviar null se vazio
     const comentarioRaw = form.comentario.value.trim()
     const comentario = comentarioRaw === '' ? null : comentarioRaw
 
     const dados = { nome, estrelas, comentario }
 
     try {
-        const response = await fetch(`${BASE_URL}/feedbacks`, {
+        const response = await fetch('http://localhost:3000/feedbacks', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dados)
         })
 
         if (response.ok) {
-            mensagem.textContent = 'Obrigado pelo seu feedback!'
-            mensagem.style.color = 'green'
-            form.reset()
-        } else {
+            window.location.href = 'agradecimento.html'
+        }
+        else {
             mensagem.textContent = 'Erro ao enviar feedback. Tente novamente.'
             mensagem.style.color = 'red'
         }
     } catch (error) {
         mensagem.textContent = 'Erro ao enviar feedback. Tente novamente.'
         mensagem.style.color = 'red'
+        console.error('Erro:', error)
     }
 })
