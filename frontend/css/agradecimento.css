@@ -25,18 +25,6 @@ body {
   position: relative;
 }
 
-/* Animação do check */
-@keyframes popIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-}
-
 /* Título principal */
 .agradecimento-box h1 {
   font-size: 2.8rem;
