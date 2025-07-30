@@ -1,0 +1,48 @@
+.teclado-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9efe0;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 5px;
+    z-index: 1000;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tecla {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.tecla:hover {
+    background-color: #e6d7b9;
+}
+
+.tecla.wide {
+    grid-column: span 2;
+}
+
+.tecla.extra-wide {
+    grid-column: span 5;
+}
+
+.tecla.ativo {
+    background-color: #d6c1a1;
+    border-color: #b89f7d;
+}
