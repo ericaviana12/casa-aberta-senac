@@ -4,25 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Feedback do Evento</title>
+  <title>Casa Aberta - Senac Tatuapé | Registro de Feedback</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/feedback.css" />
   <link rel="stylesheet" href="css/teclado.css" />
 </head>
 
 <body>
+
+  <!-- Logo e Cabeçalho -->
+  <div class="text-center mb-4">
+    <img src="assets/img/casaAberta.png" alt="Logo Casa Aberta Senac" class="logo-casa-aberta mb-3" />
+    <h1 class="fw-bold">Registro de Feedback</h1>
+    <p class="text-muted">Casa Aberta - Senac Tatuapé.</p>
+  </div>
+
   <div class="card mx-auto mt-5 p-4" style="max-width: 480px;">
     <h3 class="text-center mb-4">⭐ Deixe seu Feedback</h3>
     <form id="form-feedback" novalidate>
       <div class="mb-3">
         <label for="nome" class="form-label">Seu nome (ou deixe em branco para Anônimo)</label>
-        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome ou deixe vazio" />
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" />
       </div>
 
       <div class="mb-3">
         <label for="comentario" class="form-label">Comentário (opcional)</label>
         <textarea class="form-control" id="comentario" name="comentario" rows="3"
-          placeholder="Deixe seu comentário aqui (se desejar)"></textarea>
+          placeholder="Deixe seu comentário aqui"></textarea>
       </div>
 
       <div class="mb-3">
@@ -51,72 +59,13 @@
         </button>
       </div>
     </form>
-    <div id="mensagem" class="mt-3 text-center"></div>
-
-    <div class="teclado-container">
-      <div class="teclado">
-
-        <!-- Linha 0 - Números -->
-        <div class="tecla" onclick="inserirCaractere('1')">1</div>
-        <div class="tecla" onclick="inserirCaractere('2')">2</div>
-        <div class="tecla" onclick="inserirCaractere('3')">3</div>
-        <div class="tecla" onclick="inserirCaractere('4')">4</div>
-        <div class="tecla" onclick="inserirCaractere('5')">5</div>
-        <div class="tecla" onclick="inserirCaractere('6')">6</div>
-        <div class="tecla" onclick="inserirCaractere('7')">7</div>
-        <div class="tecla" onclick="inserirCaractere('8')">8</div>
-        <div class="tecla" onclick="inserirCaractere('9')">9</div>
-        <div class="tecla" onclick="inserirCaractere('0')">0</div>
-
-        <!-- Linha 1 -->
-        <div class="tecla letra" data-char="q" onclick="inserirCaractere('q')">q</div>
-        <div class="tecla letra" data-char="w" onclick="inserirCaractere('w')">w</div>
-        <div class="tecla letra" data-char="e" onclick="inserirCaractere('e')">e</div>
-        <div class="tecla letra" data-char="r" onclick="inserirCaractere('r')">r</div>
-        <div class="tecla letra" data-char="t" onclick="inserirCaractere('t')">t</div>
-        <div class="tecla letra" data-char="y" onclick="inserirCaractere('y')">y</div>
-        <div class="tecla letra" data-char="u" onclick="inserirCaractere('u')">u</div>
-        <div class="tecla letra" data-char="i" onclick="inserirCaractere('i')">i</div>
-        <div class="tecla letra" data-char="o" onclick="inserirCaractere('o')">o</div>
-        <div class="tecla letra" data-char="p" onclick="inserirCaractere('p')">p</div>
-
-        <!-- Linha 2 -->
-        <div class="tecla letra" data-char="a" onclick="inserirCaractere('a')">a</div>
-        <div class="tecla letra" data-char="s" onclick="inserirCaractere('s')">s</div>
-        <div class="tecla letra" data-char="d" onclick="inserirCaractere('d')">d</div>
-        <div class="tecla letra" data-char="f" onclick="inserirCaractere('f')">f</div>
-        <div class="tecla letra" data-char="g" onclick="inserirCaractere('g')">g</div>
-        <div class="tecla letra" data-char="h" onclick="inserirCaractere('h')">h</div>
-        <div class="tecla letra" data-char="j" onclick="inserirCaractere('j')">j</div>
-        <div class="tecla letra" data-char="k" onclick="inserirCaractere('k')">k</div>
-        <div class="tecla letra" data-char="l" onclick="inserirCaractere('l')">l</div>
-        <div class="tecla wide" onclick="backspace()">Apagar</div>
-
-        <!-- Linha 3 -->
-        <div class="tecla letra" data-char="z" onclick="inserirCaractere('z')">z</div>
-        <div class="tecla letra" data-char="x" onclick="inserirCaractere('x')">x</div>
-        <div class="tecla letra" data-char="c" onclick="inserirCaractere('c')">c</div>
-        <div class="tecla letra" data-char="v" onclick="inserirCaractere('v')">v</div>
-        <div class="tecla letra" data-char="b" onclick="inserirCaractere('b')">b</div>
-        <div class="tecla letra" data-char="n" onclick="inserirCaractere('n')">n</div>
-        <div class="tecla letra" data-char="m" onclick="inserirCaractere('m')">m</div>
-
-        <!-- Linha 4 -->
-        <div class="tecla wide capslock" id="capsLock" onclick="toggleCapsLock()">Capslock</div>
-        <div class="tecla" onclick="inserirCaractere('@')">@</div>
-        <div class="tecla" onclick="inserirCaractere('_')">_</div>
-        <div class="tecla" onclick="inserirCaractere('.')">.</div>
-        <div class="tecla extra-wide" onclick="inserirCaractere(' ')">Espaço</div>
-      </div>
-    </div>
-
-    <!-- Rodapé -->
-    <footer class="mt-5 py-3 bg-light border-top text-center text-muted small">
-      © 2025 Projeto Casa Aberta Senac. Todos os direitos reservados.<br>
-      Desenvolvido pelo grupo InfraTech, turma de TI 04-23.
-    </footer>
-
   </div>
+
+  <!-- Rodapé -->
+  <footer class="mt-5 py-3 border-top text-center text-muted small">
+    © 2025 Projeto Casa Aberta Senac. Todos os direitos reservados.<br>
+    Desenvolvido pelo grupo InfraTech, turma de TI 04-23.
+  </footer>
 
   <script src="js/feedback.js"></script>
   <script src="js/teclado.js"></script>

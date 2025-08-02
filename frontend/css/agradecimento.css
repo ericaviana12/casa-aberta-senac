@@ -9,12 +9,13 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  flex-direction: column;
 }
 
 /* Caixa principal com sombra e borda arredondada */
 .agradecimento-box {
   background-color: #fff8f2;
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   padding: 50px 60px;
   border-radius: 24px;
@@ -23,6 +24,7 @@ body {
     0 4px 10px rgba(179, 124, 40, 0.15);
   text-align: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Título principal */
@@ -43,7 +45,7 @@ body {
   line-height: 1.5;
 }
 
-/* Botão voltar ou continuar */
+/* Botão voltar ou continuar - estilo personalizado */
 .agradecimento-box .btn {
   background-color: #b37c28;
   color: white;
@@ -58,6 +60,9 @@ body {
   text-decoration: none;
   display: inline-block;
   user-select: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .agradecimento-box .btn:hover,
@@ -65,4 +70,18 @@ body {
   background-color: #6b4c3b;
   box-shadow: 0 8px 20px rgba(107, 76, 59, 0.6);
   outline: none;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #6b4c3b;
+  text-align: center;
+  background-color: transparent;
+  border-top: 1px solid #d2b48c;
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
 }

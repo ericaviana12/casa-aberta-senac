@@ -3,91 +3,85 @@ body {
   background: linear-gradient(135deg, #f9efe0 0%, #e9d6b7 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #4a4a4a;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding-top: 2rem;
   margin: 0;
+  min-height: 100vh;
 }
 
-.card-feedback {
-  background-color: #fff8f2;
-  padding: 30px 40px;
+/* Card principal */
+.card {
+  background-color: #fff8f2 !important;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(179, 124, 40, 0.25);
-  max-width: 480px;
-  width: 100%;
+  border: none;
 }
 
-h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+/* Título principal do formulário */
+.card h3 {
   color: #6b4c3b;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
-/* Inputs e textarea */
+/* Input e textarea */
 input[type="text"],
-textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 10px;
+textarea,
+.form-control {
+  background-color: #fffefc;
   border: 2px solid #d8c7b1;
+  border-radius: 10px;
   font-size: 1rem;
   font-family: inherit;
   color: #4a4a4a;
   transition: border-color 0.3s;
-  resize: vertical;
 }
 
 input[type="text"]:focus,
-textarea:focus {
+textarea:focus,
+.form-control:focus {
   border-color: #b37c28;
+  box-shadow: none;
   outline: none;
 }
 
 /* Labels */
-label {
-  display: block;
-  margin-bottom: 0.5rem;
+label.form-label {
   font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #4a3c2f;
 }
 
 /* Botão enviar */
-button[type="submit"] {
-  width: 100%;
-  padding: 14px;
+button[type="submit"],
+.btn-primary {
   background-color: #b37c28;
-  color: white;
   border: none;
   border-radius: 12px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  cursor: pointer;
+  padding: 14px;
   transition: background-color 0.3s;
-  margin-top: 1.5rem;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.btn-primary:hover {
   background-color: #6b4c3b;
 }
 
-/* Mensagem feedback */
+/* Mensagem de status */
 #mensagem {
   margin-top: 1.2rem;
   font-weight: 600;
   text-align: center;
+  color: #6b4c3b;
 }
 
 /* Estrelas */
 .star-rating {
   display: inline-flex;
   flex-direction: row-reverse;
-  font-size: 2.5rem;
+  font-size: 2rem;
   user-select: none;
-  margin-top: 0.4rem;
 }
 
 .star-rating input[type="radio"] {
@@ -101,12 +95,17 @@ button[type="submit"]:hover {
   padding: 0 0.1rem;
 }
 
-.star-rating input[type="radio"]:checked ~ label,
-.star-rating input[type="radio"]:checked + label {
+.star-rating input[type="radio"]:checked~label,
+.star-rating input[type="radio"]:checked+label {
   color: #b37c28;
 }
 
 .star-rating label:hover,
-.star-rating label:hover ~ label {
+.star-rating label:hover~label {
   color: #b37c28;
+}
+
+/* Logo */
+.logo-casa-aberta {
+  max-width: 160px;
 }

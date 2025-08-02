@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Casa Aberta Senac - página para cadastro de presenças no evento" />
   <meta name="keywords" content="casa aberta, senac, cadastro, evento, presença" />
-  <title>Registro de Presença - Casa Aberta Senac</title>
+  <title>Casa Aberta - Senac Tatuapé | Registro de presença</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/form.css" />
   <link rel="stylesheet" href="css/teclado.css" />
@@ -19,7 +19,7 @@
     <div class="text-center mb-4">
       <img src="assets/img/casaAberta.png" alt="Logo Casa Aberta Senac" class="logo-casa-aberta mb-3" />
       <h1 class="fw-bold">Registro de presença</h1>
-      <p class="text-muted">Bem-vindo ao evento Casa Aberta do Senac Tatuapé.</p>
+      <p class="text-muted">Bem-vindo ao evento Casa Aberta - Senac Tatuapé.</p>
     </div>
 
     <!-- Formulário -->
@@ -57,25 +57,80 @@
               </div>
             </form>
 
-            <div id="mensagem" class="mt-4 text-center fw-semibold" aria-live="polite"></div>
-
             <!-- Botão de Voltar -->
             <div class="text-center mt-3">
               <a href="totem.html" class="btn btn-outline-secondary">⬅ Voltar para a tela anterior</a>
             </div>
-
           </div>
         </div>
       </div>
+
+      <div class="teclado-container">
+        <div class="teclado">
+
+          <!-- Linha 0 - Números -->
+          <div class="tecla" onclick="inserirCaractere('1')">1</div>
+          <div class="tecla" onclick="inserirCaractere('2')">2</div>
+          <div class="tecla" onclick="inserirCaractere('3')">3</div>
+          <div class="tecla" onclick="inserirCaractere('4')">4</div>
+          <div class="tecla" onclick="inserirCaractere('5')">5</div>
+          <div class="tecla" onclick="inserirCaractere('6')">6</div>
+          <div class="tecla" onclick="inserirCaractere('7')">7</div>
+          <div class="tecla" onclick="inserirCaractere('8')">8</div>
+          <div class="tecla" onclick="inserirCaractere('9')">9</div>
+          <div class="tecla" onclick="inserirCaractere('0')">0</div>
+
+          <!-- Linha 1 -->
+          <div class="tecla letra" data-char="q" onclick="inserirCaractere('q')">q</div>
+          <div class="tecla letra" data-char="w" onclick="inserirCaractere('w')">w</div>
+          <div class="tecla letra" data-char="e" onclick="inserirCaractere('e')">e</div>
+          <div class="tecla letra" data-char="r" onclick="inserirCaractere('r')">r</div>
+          <div class="tecla letra" data-char="t" onclick="inserirCaractere('t')">t</div>
+          <div class="tecla letra" data-char="y" onclick="inserirCaractere('y')">y</div>
+          <div class="tecla letra" data-char="u" onclick="inserirCaractere('u')">u</div>
+          <div class="tecla letra" data-char="i" onclick="inserirCaractere('i')">i</div>
+          <div class="tecla letra" data-char="o" onclick="inserirCaractere('o')">o</div>
+          <div class="tecla letra" data-char="p" onclick="inserirCaractere('p')">p</div>
+
+          <!-- Linha 2 -->
+          <div class="tecla letra" data-char="a" onclick="inserirCaractere('a')">a</div>
+          <div class="tecla letra" data-char="s" onclick="inserirCaractere('s')">s</div>
+          <div class="tecla letra" data-char="d" onclick="inserirCaractere('d')">d</div>
+          <div class="tecla letra" data-char="f" onclick="inserirCaractere('f')">f</div>
+          <div class="tecla letra" data-char="g" onclick="inserirCaractere('g')">g</div>
+          <div class="tecla letra" data-char="h" onclick="inserirCaractere('h')">h</div>
+          <div class="tecla letra" data-char="j" onclick="inserirCaractere('j')">j</div>
+          <div class="tecla letra" data-char="k" onclick="inserirCaractere('k')">k</div>
+          <div class="tecla letra" data-char="l" onclick="inserirCaractere('l')">l</div>
+          <div class="tecla wide" onclick="backspace()">Apagar</div>
+
+          <!-- Linha 3 -->
+          <div class="tecla letra" data-char="z" onclick="inserirCaractere('z')">z</div>
+          <div class="tecla letra" data-char="x" onclick="inserirCaractere('x')">x</div>
+          <div class="tecla letra" data-char="c" onclick="inserirCaractere('c')">c</div>
+          <div class="tecla letra" data-char="v" onclick="inserirCaractere('v')">v</div>
+          <div class="tecla letra" data-char="b" onclick="inserirCaractere('b')">b</div>
+          <div class="tecla letra" data-char="n" onclick="inserirCaractere('n')">n</div>
+          <div class="tecla letra" data-char="m" onclick="inserirCaractere('m')">m</div>
+
+          <!-- Linha 4 -->
+          <div class="tecla wide capslock" id="capsLock" onclick="toggleCapsLock()">Capslock</div>
+          <div class="tecla" onclick="inserirCaractere('@')">@</div>
+          <div class="tecla" onclick="inserirCaractere('_')">_</div>
+          <div class="tecla" onclick="inserirCaractere('.')">.</div>
+          <div class="tecla extra-wide" onclick="inserirCaractere(' ')">Espaço</div>
+        </div>
+      </div>
+
     </div>
-
-
-    <!-- Rodapé -->
-    <footer class="mt-5 py-3 bg-light border-top text-center text-muted small">
-      © 2025 Projeto Casa Aberta Senac. Todos os direitos reservados.<br>
-      Desenvolvido pelo grupo InfraTech, turma de TI 04-23.
-    </footer>
   </div>
+
+  <!-- Rodapé -->
+  <footer class="mt-5 py-3 border-top text-center text-muted small">
+    © 2025 Projeto Casa Aberta Senac. Todos os direitos reservados.<br>
+    Desenvolvido pelo grupo InfraTech, turma de TI 04-23.
+  </footer>
+
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/config.js"></script>
