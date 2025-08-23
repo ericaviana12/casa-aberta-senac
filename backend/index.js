@@ -46,7 +46,7 @@ app.post('/feedbacks', async (req, res, next) => {
   try {
     const [result] = await db.query(
       'INSERT INTO feedbacks (nome, estrelas, comentario) VALUES (?, ?, ?)',
-      [nome || 'Anônimo', estrelas, comentario || '']
+      [nome || 'Anônimo', estrelas, comentario || 'Sem comentário']
     )
     res.status(201).json({ id: result.insertId, mensagem: 'Feedback enviado com sucesso' })
   } catch (error) {
